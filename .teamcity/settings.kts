@@ -63,7 +63,7 @@ object Build : BuildType({
             name = "Deploy"
 
             conditions {
-                equals("teamcity.build.branch.is_default", "true")
+                equals("teamcity.build.branch", "master")
             }
             goals = "clean deploy"
             userSettingsSelection = "settings.xml"
